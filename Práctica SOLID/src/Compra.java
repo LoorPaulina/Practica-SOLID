@@ -1,14 +1,11 @@
 
-public class Compra {
-	private Pago pago;
-	private PagoPayPal pagoPayPal;
+public class Compra implements Pagable{ //SE IMPLEMENTA LA INTERFAZ PAGABLE
+	private Pagable pago; //se crea un objeto tipo pagable
 	private List articulos;
-	public Compra(Pago pago) {
+	public Compra(Pagable pago) { //ahora el constructor solo recibe la interfaz, ya se cumple DIP
 		//inicializaciones
 	}
-	public Compra(PagoPayPal pagoPayPal) {
-		//inicializaciones
-	}
+
 	
 	public void agregarArticulo(Articulo articulo) {
 		//agregar un articulo a la compra
